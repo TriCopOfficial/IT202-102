@@ -30,3 +30,30 @@ function get_user_id() {
     }
     return false;
 }
+function get_user_daily() {
+    if (is_logged_in()) { //we need to check for login first because "user" key may not exist
+        return se($_SESSION["user"], "daily", false, false);
+    }
+    return false;
+}
+
+function get_user_weekly() {
+    if (is_logged_in()) { //we need to check for login first because "user" key may not exist
+        return se($_SESSION["user"], "weekly", false, false);
+    }
+    return false;
+}
+
+function get_user_monthly() {
+    if (is_logged_in()) { //we need to check for login first because "user" key may not exist
+        return se($_SESSION["user"], "monthly", false, false);
+    }
+    return false;
+}
+
+function get_user_lifetime() {
+    if (is_logged_in()) { //we need to check for login first because "user" key may not exist
+        return se($_SESSION["user"], "lifetime", false, false);
+    }
+    return false;
+}
